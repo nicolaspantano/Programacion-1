@@ -99,6 +99,8 @@ printf("\nEl negativo mas grande fue %d",maximoNegativo);
 printf("\nSe ingresaron %d numeros entre -10 y 50",cantEnRangoDado);
 printf("\nEl promedio total es %.2f",promedioTotal);
 
+system("pause");
+
 
 
 
