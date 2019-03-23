@@ -24,7 +24,7 @@ int main()
     do{
         printf("Ingrese un numero: ");
         scanf("%d",&numero);
-            while(numero==0)
+            while(numero==0|| ))
                 {
                     printf("El numero no puede ser 0. Ingrese un numero");
                     scanf("%d",&numero);
