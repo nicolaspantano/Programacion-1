@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Ingresos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Ingresos.h" />
+		<Unit filename="Recursividad.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Recursividad.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
