@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1554130828 source:c:\users\alumno\desktop\programacion-1-master\clase 5\clase 5\funciones vectores.c
+	"Funciones vectores.h"
+
+1554131228 source:c:\users\alumno\desktop\programacion-1-master\clase 5\clase 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Funciones vectores.h"
+
+1554130816 c:\users\alumno\desktop\programacion-1-master\clase 5\clase 5\funciones vectores.h
+
