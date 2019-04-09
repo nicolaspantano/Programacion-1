@@ -11,10 +11,6 @@ int main()
     char apellidoModificado[XX];
     char aux;
 
-    /*printf("Ingrese su/s nombre/s: ");
-    fgets(nombre,50,stdin);
-    printf("Ingrese su/s apellido/s: ");
-    fgets(apellido,20,stdin);*/
     printf("Ingrese su/s nombre/s: ");
     scanf("%[^\n]",nombre);
     printf("Ingrese su/s apellido/s: ");
@@ -29,7 +25,8 @@ int main()
     strlwr(apellidoModificado);
 
 
-    printf("%s, %s, %c",apellidoModificado,nombreModificado,aux);
+
+    printf("%s, %s",apellidoModificado,nombreModificado,aux);
 
 
 
