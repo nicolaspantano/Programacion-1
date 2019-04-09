@@ -37,7 +37,7 @@ int main()
         i++;
     }
 
-    puts(apellidoNombre);//solo algo literal, o solo el nombre de una variable. Variante del printf.
+    puts(apellidoNombre);//solo algo literal, o solo el nombre de una variable. Variante del printf.a
 
     return 0;
 }
