@@ -129,6 +129,7 @@ void modificarDatos(eEmpleado lista[],int tam)
             case 3:
                     printf("Ingrese el nuevo sueldo bruto: ");
                     scanf("%f",&lista[index].sueldoBruto);
+                    lista[index].sueldoNeto=lista[index].sueldoBruto*0.85;
                     break;
             case 4:
                     printf("Saliendo...\n");
