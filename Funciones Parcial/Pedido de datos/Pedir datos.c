@@ -18,4 +18,12 @@ float pedirFloat(char texto[])
 
     return unFloat;
 }
+char pediChar(char texto[])
+{
+    char unChar;
+        printf("%s",texto[]);
+        scanf("%c",unChar);
+
+        return unChar;
+}
 

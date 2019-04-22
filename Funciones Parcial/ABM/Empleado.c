@@ -1,6 +1,5 @@
 
 #include "Empleado.h"
-#include <string.h>
 
 
 void cargarEmpleado(eEmpleado lista[], int tam)
@@ -79,9 +78,9 @@ void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
 {
     int i;
     int legajos[]={1,8,9,7,2,4};
-    char nombres[][50]={"Carlos","Maria","Carlos","Pedro","Carlos","Mateo"};
-    char sexo[]={'M','F','M','M','M','M'};
-    float sueldosBruto[]={22000,22000,15000,4000,21000,6000};
+    char nombres[][50]={"Maria","Pedro","Jose","Pedro","Pablo","Mateo"};
+    char sexo[]={'F','M','M','M','M','M'};
+    float sueldosBruto[]={1000,2000,3000,4000,5000,6000};
 
     for(i=0; i<tam; i++)
     {
@@ -93,6 +92,10 @@ void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
         lista[i].estado = OCUPADO;
 
     }
+
+
+
+
 }
 
 
@@ -158,57 +161,4 @@ int buscarLegajo(eEmpleado lista[],int tam,int valor)
 
 }
 
-float buscarMaximo(eEmpleado vector[],int tam)
-{
-    int i;
-    int flag=0;
-    float maximo;
-    for(i=0; i<tam; i++)
-    {
-        if(vector[i].estado==OCUPADO)
-        {
 
-
-            if(flag==0||vector[i].sueldoBruto >maximo)
-            {
-                maximo=vector[i].sueldoBruto;
-                flag=1;
-            }
-        }
-    }
-    return maximo;
-
-}
-void mostrarEmpleadosMax(eEmpleado lista[],int tam)
-{
-    int i;
-    int maximo;
-    for(i=0; i<tam; i++)
-    {
-        if(lista[i].estado==OCUPADO)
-        {
-            if(buscarMaximo(lista,tam)==lista[i].sueldoBruto)
-            {
-                mostrarEmpleado(lista[i]);
-            }
-        }
-    }
-
-}
-
-int buscarEmpleado(eEmpleado lista[],int tam)
-{
-    int i;
-    int cantidad=0;
-        for(i=0;i<tam;i++)
-        {
-            if(strcmp(lista[i].nombre,"Carlos")==0&&lista[i].sueldoBruto>20000)
-            {
-               cantidad++;
-            }
-
-        }
-
-    return cantidad;
-
-}

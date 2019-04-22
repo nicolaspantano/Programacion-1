@@ -12,3 +12,11 @@ int pedirEntero(char texto[]);
  *
  */
 float pedirFloat(char texto[]);
+/** \brief Pide un char
+ *
+ * \param texto[] char Texto que va a indicar que se pide
+ * \return char El char que ingreso el usuario
+ *
+ */
+char pediChar(char texto[]);
+

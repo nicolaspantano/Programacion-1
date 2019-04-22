@@ -22,8 +22,3 @@ void inicializarEmpleados(eEmpleado[], int);
 void hardcodearDatosEmpleados(eEmpleado[], int);
 void modificarDatos(eEmpleado[],int);
 int buscarLegajo(eEmpleado[],int,int);
-
-float buscarMaximo(eEmpleado[],int);
-int buscarEmpleado(eEmpleado[],int);
-void mostrarEmpleadosMax(eEmpleado[],int);
-
