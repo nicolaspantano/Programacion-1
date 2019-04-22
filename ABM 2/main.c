@@ -23,12 +23,12 @@ int main()
     eEmpleado lista[T];
     inicializarEmpleados(lista,T);
 
-    eSector sectores[3] = {{1,"Contabilidad",100},{2,"Sistemas",200},{3, "RRHH", 150}};
+    eSector sectores[3] = {{0,"Contabilidad",100},{1,"Sistemas",200},{2, "RRHH", 150}};
 
 
 
 
-hardcodearDatosEmpleados(lista,6);
+hardcodearDatosEmpleados(lista,6,sectores);
     do
     {
         opcion = menuDeOpciones("1.Alta\n2.Baja\n3.Modificar\n4.Mostrar\n5.Informar\n10.Salir\nElija una opcion: ");

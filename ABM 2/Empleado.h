@@ -46,7 +46,7 @@ void mostrarListaEmpleados(eEmpleado[], int, eSector[], int);
 
 int buscarLibre(eEmpleado[], int);
 void inicializarEmpleados(eEmpleado[], int);
-void hardcodearDatosEmpleados(eEmpleado[], int);
+void hardcodearDatosEmpleados(eEmpleado[], int,eSector[]);
 void modificar(eEmpleado[], int, int);
 int buscarLegajo(eEmpleado[], int, int);
 void borrarEmpleado(eEmpleado[], int, int);

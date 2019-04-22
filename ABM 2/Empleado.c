@@ -92,14 +92,15 @@ void inicializarEmpleados(eEmpleado lista[], int tam)
     }
 }
 
-void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
+void hardcodearDatosEmpleados(eEmpleado lista[], int tam,eSector sectores[])
 {
     int i;
     int legajos[]= {1,8,9,7,2,4};
     char nombres[][50]= {"Carlos","Maria","Carlos","Pedro","Carlos","Mateo"};
     char sexo[]= {'M','F','M','M','M','M'};
-    float sueldosBruto[]= {22000,22000,15000,4000,21000,6000};
-    int sector[]={1,2,3,1,2,2};
+    //float sueldosBruto[]= {22000,22000,15000,4000,21000,6000};
+    int sector[]={0,1,2,0,1,1};
+    int cantHoras[]={120,128,128,116,114,130};
 
     eFecha unaFecha = {22,04,2019};
 
@@ -108,10 +109,12 @@ void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
         lista[i].legajo = legajos[i];
         strcpy(lista[i].nombre, nombres[i]);
         lista[i].sexo = sexo[i];
-        lista[i].sueldoBruto = sueldosBruto[i];
-        lista[i].sueldoNeto = sueldosBruto[i] * 0.85;
-        lista[i].estado = OCUPADO;
         lista[i].idSector = sector[i];
+        lista[i].cantidadHoras = cantHoras[i];
+        lista[i].sueldoBruto = sectores[lista[i].idSector].valor*lista[i].cantidadHoras;
+        lista[i].sueldoNeto = lista[i].sueldoBruto * 0.85;
+        lista[i].estado = OCUPADO;
+
 
 
 
