@@ -18,5 +18,14 @@ float pedirFloat(char texto[]);
  * \return char El char que ingreso el usuario
  *
  */
-char pediChar(char texto[]);
-
+char pedirChar(char texto[]);
+/** \brief Pide una cadena y la valida
+ *
+ * \param mensaje[] char Mensaje que indica que se pide. "Ingrese (...)
+ * \param cadena[] char cadena donde se va a guardar
+ * \param tam int tamaño de la cadena donde se va a guardar
+ * \return void
+ *
+ */
+void pedirCadena(char mensaje[],char cadena[],int tam);
+void validarTamCadena(char mensajeError[],char cadena[],int tam);

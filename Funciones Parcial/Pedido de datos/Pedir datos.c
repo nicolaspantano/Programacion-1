@@ -18,12 +18,30 @@ float pedirFloat(char texto[])
 
     return unFloat;
 }
-char pediChar(char texto[])
+char pedirChar(char texto[])
 {
     char unChar;
-        printf("%s",texto[]);
-        scanf("%c",unChar);
+        printf("%s",texto);
+        scanf("%c",&unChar);
 
         return unChar;
 }
+void pedirCadena(char mensaje[],char cadena[],int tam)
+{
+    printf("Ingrese %s",mensaje);
+    fflush(stdin);
+    scanf("%[^\n]",cadena);
+    validarTamCadena(mensaje,cadena,tam);
+}
+void validarTamCadena(char mensajeError[],char cadena[],int tam)
+{
 
+    while(strlen(cadena)>tam)
+    {
+        printf("Reingrese %s",mensajeError);
+        fflush(stdin);
+        scanf("%[^\n]",cadena);
+    }
+
+
+}

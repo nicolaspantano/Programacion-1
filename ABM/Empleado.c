@@ -202,7 +202,7 @@ int buscarEmpleado(eEmpleado lista[],int tam)
     int cantidad=0;
         for(i=0;i<tam;i++)
         {
-            if(strcmp(lista[i].nombre,"Carlos")==0&&lista[i].sueldoBruto>20000)
+            if(stricmp(lista[i].nombre,"carlos")==0&&lista[i].sueldoBruto>20000)
             {
                cantidad++;
             }
