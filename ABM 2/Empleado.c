@@ -1,8 +1,9 @@
 
 #include "Empleado.h"
 
+#include "string.h"
 
-void cargarEmpleado(eEmpleado lista[], int tam)
+void cargarEmpleado(eEmpleado lista[], int tam, eSector sectores[],int ts)
 {
     int i;
 
@@ -17,9 +18,12 @@ void cargarEmpleado(eEmpleado lista[], int tam)
         printf("Ingrese sexo: ");
         fflush(stdin);
         scanf("%c", &lista[i].sexo);
-        printf("Ingrese sueldo bruto: ");
-        scanf("%f", &lista[i].sueldoBruto);
-
+        printf("Ingrese cantidad de horas: ");
+        scanf("%d", &lista[i].cantidadHoras);
+        printf("Ingrese sector: \n");
+        mostrarDescripcionSectores(sectores,ts);
+        scanf("%d",&lista[i].idSector);
+        lista[i].sueldoBruto = sectores[lista[i].idSector].valor*lista[i].cantidadHoras;
         lista[i].sueldoNeto =lista[i].sueldoBruto*0.85;
 
         lista[i].estado = OCUPADO;
@@ -61,7 +65,7 @@ void mostrarEmpleado(eEmpleado unEmpleado, eSector sectores[], int ts)
         }
     }
 
-    printf("%4d %10s %c %4f %4f   %s\n", unEmpleado.legajo,unEmpleado.nombre, unEmpleado.sexo, unEmpleado.sueldoBruto,unEmpleado.sueldoNeto,descripcionSector);
+    printf("%4d %10s %c %4.2f %4.2f   %s\n", unEmpleado.legajo,unEmpleado.nombre, unEmpleado.sexo, unEmpleado.sueldoBruto,unEmpleado.sueldoNeto,descripcionSector);
 
 
 
@@ -257,5 +261,99 @@ int buscarLegajo(eEmpleado lista[], int tam, int legajo)
 {
 
 }
+void mostrarDescripcionSectores(eSector sectores[],int tam)
+{
+    int i;
+    for(i=0; i<tam; i++)
+    {
+        mostrarDescripcionSector(sectores[i]);
+
+    }
+}
+void mostrarDescripcionSector(eSector sector)
+{
 
 
+    printf("%d.%s\n",sector.idSector,sector.descripcion);
+
+
+}
+void mostrarSectores(eSector sectores[], int ts,eEmpleado empleados[],int tam)
+{
+    int i;
+    for(i=0; i<ts; i++)
+    {
+                mostrarSector(sectores[i],empleados,tam);
+    }
+}
+void mostrarSector(eSector sector,eEmpleado empleados[],int tam)
+{
+    int i;
+    mostrarDescripcionSector(sector);
+    for(i=0;i<tam;i++)
+    {
+        if(empleados[i].idSector==sector.idSector)
+        {
+            printf("%s\n",empleados[i].nombre);
+        }
+    }
+}
+void mostrarSueldosSectores(eSector sectores[], int ts,eEmpleado empleados[],int tam)
+{
+    int i;
+    for(i=0; i<ts; i++)
+    {
+                mostrarSueldoSector(sectores[i],empleados,tam);
+    }
+}
+void mostrarSueldoSector(eSector sector,eEmpleado empleados[],int tam)
+{
+     int i;
+     float totalSueldos=0;
+    mostrarDescripcionSector(sector);
+    for(i=0;i<tam;i++)
+    {
+        if(empleados[i].estado==OCUPADO)
+        {
+
+
+        if(empleados[i].idSector==sector.idSector)
+        {
+            totalSueldos+=empleados[i].sueldoBruto;
+        }
+        }
+    }
+    printf("El total de sueldos es: %.2f\n",totalSueldos);
+}
+void mostrarSectorMasEmpleados(eSector sectores[],int ts,eEmpleado empleados[],int tam)
+{
+    int i=0;
+    int j=0;
+    int empleadosMax;
+    char sectorMax[30];
+    int flag=0;
+    int cantEmpleados=0;
+    for(i=0;i<ts;i++)
+    {
+        for(j=0;j<tam;j++)
+        {
+            if(empleados[j].estado==OCUPADO)
+            {
+                if(empleados[j].idSector==sectores[i].idSector)
+                {
+                    cantEmpleados++;
+                }
+            }
+
+        }
+
+        if(flag==0||cantEmpleados>empleadosMax)
+        {
+            strcpy(sectorMax,sectores[i].descripcion);
+            empleadosMax=cantEmpleados;
+            flag=1;
+            cantEmpleados=0;
+        }
+    }
+    printf("El sector con mayor empleados es: %s\n",sectorMax);
+}

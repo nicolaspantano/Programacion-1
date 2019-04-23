@@ -35,7 +35,7 @@ hardcodearDatosEmpleados(lista,6,sectores);
         switch(opcion)
         {
             case 1:
-                cargarEmpleado(lista,  T);
+                cargarEmpleado(lista,  T,sectores,3);
 
             break;
             case 2:
@@ -53,6 +53,9 @@ hardcodearDatosEmpleados(lista,6,sectores);
 
                 mostrarEmpleadosSueldoMaximo(lista,T);
                 printf("La cantidad de carlos es: %d\n", contarCarlos(lista,T));
+                mostrarSectores(sectores,3,lista,T);
+                mostrarSueldosSectores(sectores,3,lista,T);
+                mostrarSectorMasEmpleados(sectores,3,lista,T);
 
                 break;
 

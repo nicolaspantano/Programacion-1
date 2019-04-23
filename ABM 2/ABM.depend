@@ -19,3 +19,14 @@
 1555954191 source:c:\users\compumar\desktop\programacion-1\abm 2\empleado.c
 	"Empleado.h"
 
+1556029774 source:c:\users\alumno\desktop\programacion-1\abm 2\main.c
+	<stdlib.h>
+	"Empleado.h"
+
+1556029651 c:\users\alumno\desktop\programacion-1\abm 2\empleado.h
+	<stdio.h>
+
+1556030586 source:c:\users\alumno\desktop\programacion-1\abm 2\empleado.c
+	"Empleado.h"
+	"string.h"
+
