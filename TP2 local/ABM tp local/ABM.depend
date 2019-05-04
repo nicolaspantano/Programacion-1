@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1555945588 source:c:\users\alumno\desktop\abm\main.c
+	<stdlib.h>
+	"Empleado.h"
+
+1555945588 c:\users\alumno\desktop\abm\empleado.h
+	<stdio.h>
+
+1555945237 source:c:\users\alumno\desktop\abm\empleado.c
+	"Empleado.h"
+
+1555957925 source:c:\users\compumar\desktop\programacion-1\abm 2\main.c
+	<stdlib.h>
+	"Empleado.h"
+
+1555952611 c:\users\compumar\desktop\programacion-1\abm 2\empleado.h
+	<stdio.h>
+
+1555954191 source:c:\users\compumar\desktop\programacion-1\abm 2\empleado.c
+	"Empleado.h"
+
+1556029774 source:c:\users\alumno\desktop\programacion-1\abm 2\main.c
+	<stdlib.h>
+	"Empleado.h"
+
+1556029651 c:\users\alumno\desktop\programacion-1\abm 2\empleado.h
+	<stdio.h>
+
+1556030586 source:c:\users\alumno\desktop\programacion-1\abm 2\empleado.c
+	"Empleado.h"
+	"string.h"
+
+1556903677 source:c:\users\compumar\desktop\tp2 local\abm tp local\empleado.c
+	"Empleado.h"
+	"string.h"
+	"Pedir datos.h"
+
+1556902152 c:\users\compumar\desktop\tp2 local\abm tp local\empleado.h
+	<stdio.h>
+
+1556214363 c:\users\compumar\desktop\tp2 local\abm tp local\pedir datos.h
+
+1556763202 source:c:\users\compumar\desktop\tp2 local\abm tp local\main.c
+	<stdlib.h>
+	"Empleado.h"
+
+1556747311 source:c:\users\compumar\desktop\tp2 local\abm tp local\pedir datos.c
+	"Pedir datos.h"
+	<stdio.h>
+
