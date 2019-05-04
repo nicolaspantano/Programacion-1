@@ -53,12 +53,12 @@
 	"string.h"
 	"Pedir datos.h"
 
-1556978271 c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\empleado.h
+1556992347 c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\empleado.h
 	<stdio.h>
 
 1556976784 c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\pedir datos.h
 
-1556978405 source:c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\main.c
+1556978623 source:c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\main.c
 	<stdlib.h>
 	"Empleado.h"
 

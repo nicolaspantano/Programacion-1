@@ -12,7 +12,7 @@ void hardcodearDatosEmpleados(eEmployee lista[], int tam)
     char nombres[][50]= {"Carlos","Maria","Carlos","Pedro"};
     char apellidos[][50]={"Mendez","Perez","Gomez","Pantano"};
     float sueldosBruto[]= {22000,22000,15000,4000};
-    int sector[]={3,1,2,0};
+    int sector[]={3,1,2,1};
 
     for(i=0; i<tam; i++)
     {
@@ -146,18 +146,19 @@ void removeEmployee(eEmployee list[], int tam)
      }
 }
 
-void sortEmployeesLastName(eEmployee list[],int len)
+void sortEmployeesLastNameAndSector(eEmployee list[],int len)
 {
     int i;
     int j;
     char auxCadena[51];
     int auxInt;
     float auxFloat;
+
     for(i=0;i<len-1;i++)
     {
         for(j=i+1;j<len;j++)
         {
-            if(list[i].isEmpty==FALSE&&list[j].isEmpty==FALSE)
+            if(list[i].isEmpty==FALSE&&list[j].isEmpty==FALSE&&list[i].sector==list[j].sector)
             {
 
 
@@ -235,7 +236,7 @@ void sortEmployees(eEmployee list[], int len)
 {
     sortEmployeesSector(list,len);
 
-        sortEmployeesLastName(list, len);
+        sortEmployeesLastNameAndSector(list, len);
 
 
 }

@@ -26,7 +26,7 @@ int findEmployeeById(eEmployee[],int,int);
 void removeEmployee(eEmployee[],int);
 void sortEmployees(eEmployee[],int);
 void sortEmployeesSector(eEmployee[],int);
-void sortEmployeesLastName(eEmployee[],int);
+void sortEmployeesLastNameAndSector(eEmployee[],int);
 void printEmployees(eEmployee[], int);
 int findFree(eEmployee[], int);
 void printOneEmployee(eEmployee aEmployee);
