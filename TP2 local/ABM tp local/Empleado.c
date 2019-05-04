@@ -257,6 +257,44 @@ void printEmployees(eEmployee list[], int len)
 
     }
 }
+void calcularEmpleadosSobrePromedio(eEmployee list[],int len, float promedio)
+{
+    int i;
+    int cantEmpleadosSobrePromedio=0;
+        for(i=0;i<len;i++)
+        {
+            if(list[i].isEmpty==FALSE)
+            {
+                if(list[i].salary>promedio)
+                {
+                    cantEmpleadosSobrePromedio++;
+                }
+            }
+        }
+        printf("%d empleados superan el sueldo promedio",cantEmpleadosSobrePromedio);
+}
+void calcularSalarios(eEmployee list[], int len)
+{
+    int i;
+    float salarioTotal=0;
+    int cantEmpleados=0;
+    float promedioSalarios;
+        for(i=0;i<len;i++)
+        {
+            if(list[i].isEmpty==FALSE)
+            {
+                salarioTotal+=list[i].salary;
+                cantEmpleados++;
+            }
+        }
+        promedioSalarios=salarioTotal/cantEmpleados;
+
+        printf("El total de los salarios es: %.2f\n",salarioTotal);
+        printf("El salario promedio es: %.2f\n",promedioSalarios);
+        calcularEmpleadosSobrePromedio(list,len,promedioSalarios);
+
+}
+
 
 
 

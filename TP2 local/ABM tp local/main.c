@@ -22,7 +22,7 @@ int main()
 
     hardcodearDatosEmpleados(lista,4);
     do{
-    opcion=menuDeOpciones("1.Alta\n2.Modificar\n3.Baja\n4.Informar\n5.Salir\nElija una opcion: ");
+    opcion=menuDeOpciones("Sectores: 1-Contabilidad,2-Sistemas,3-RRHH\n1.Alta\n2.Modificar\n3.Baja\n4.Informar\n5.Salir\nElija una opcion: ");
     switch(opcion)
     {
 
@@ -41,6 +41,7 @@ int main()
         case 4:
                 sortEmployees(lista,T);
                 printEmployees(lista,T);
+                calcularSalarios(lista,T);
                 break;
 
 

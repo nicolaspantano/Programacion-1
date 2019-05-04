@@ -31,6 +31,8 @@ void printEmployees(eEmployee[], int);
 int findFree(eEmployee[], int);
 void printOneEmployee(eEmployee aEmployee);
 void modificar(eEmployee[],int);
+void calcularEmpleadosSobrePromedio(eEmployee[],int,float);
+void calcularSalarios(eEmployee[],int);
 
 /*void mostrarEmpleado(eEmpleado, eSector[], int);
 void cargarEmpleado(eEmpleado[], int, eSector[],int);

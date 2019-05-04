@@ -48,3 +48,21 @@
 	"Pedir datos.h"
 	<stdio.h>
 
+1556978480 source:c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\empleado.c
+	"Empleado.h"
+	"string.h"
+	"Pedir datos.h"
+
+1556978271 c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\empleado.h
+	<stdio.h>
+
+1556976784 c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\pedir datos.h
+
+1556978405 source:c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\main.c
+	<stdlib.h>
+	"Empleado.h"
+
+1556976784 source:c:\users\compumar\desktop\programacion-1\tp2 local\abm tp local\pedir datos.c
+	"Pedir datos.h"
+	<stdio.h>
+
