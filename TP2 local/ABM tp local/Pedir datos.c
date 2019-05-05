@@ -1,6 +1,6 @@
 #include "Pedir datos.h"
 #include <stdio.h>
-
+#include <string.h>
 int pedirEntero(char texto[])
 {
     int unEntero;
@@ -25,9 +25,12 @@ float pedirFloat(char texto[])
 char pedirChar(char texto[])
 {
     char unChar;
+
         printf("%s",texto);
+        fflush(stdin);
         scanf("%c",&unChar);
 
+        unChar=validarCharSeguir(unChar);
         return unChar;
 }
 void pedirCadena(char mensaje[],char cadena[],int tam)
@@ -43,7 +46,7 @@ void validarTamCadena(char mensajeError[],char cadena[],int tam)
     while(strlen(cadena)>tam)
     {
         printf("Reingrese %s",mensajeError);
-        //fflush(stdin);
+        fflush(stdin);
         scanf("%[^\n]",cadena);
     }
 
@@ -65,4 +68,21 @@ float validarFloatPositivo(float unFloat)
         unFloat=pedirFloat("Ingresar un numero positivo: ");
     }
     return unFloat;
+}
+
+char validarCharSeguir(char unChar)
+{
+    while(unChar!='s'&&unChar!='n')
+    {
+        unChar=pedirChar("Ingrese 's'=si o 'n'=no: ");
+    }
+    return unChar;
+}
+int menuDeOpciones(char mensaje[])
+{
+    int opcion;
+    printf("%s", mensaje);
+    scanf("%d", &opcion);
+
+    return opcion;
 }

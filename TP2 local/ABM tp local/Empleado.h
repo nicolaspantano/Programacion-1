@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-#define LIBRE 0
-#define OCUPADO 1
-
-
-
 typedef struct
 {
     int id;
@@ -18,45 +13,120 @@ typedef struct
 
 
 
+/** \brief Hardcodea empleados
+ *
+ * \param lista[] eEmployee lista de empleados
+ * \param tam int cantidad de empleados a hardcodear
+ * \return void
+ *
+ */
 void hardcodearDatosEmpleados(eEmployee lista[], int tam);
 
+/** \brief Establece todos los isEmpty en TRUE
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void initEmployees(eEmployee[],int);
+/** \brief añade empleados
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void addEmployee(eEmployee[],int);
+/** \brief Encuentra un empleado segun su id
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \param int id a encontrar
+ * \return int indice donde se encuentra dicho id
+ *
+ */
 int findEmployeeById(eEmployee[],int,int);
+/** \brief Baja logica de un empleado
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void removeEmployee(eEmployee[],int);
+/** \brief Ordena empleados segun su sector y apellido
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void sortEmployees(eEmployee[],int);
+/** \brief Ordena los empleados por sector
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void sortEmployeesSector(eEmployee[],int);
+/** \brief Ordena los empleados ordenados por apellido, por cada sector
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void sortEmployeesLastNameAndSector(eEmployee[],int);
+/** \brief Muestra la lista de empleados
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void printEmployees(eEmployee[], int);
+/** \brief Encuentra un espacio libre
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return int indice del lugar disponible
+ *
+ */
 int findFree(eEmployee[], int);
+/** \brief Muestra un empleado
+ *
+ * \param aEmployee eEmployee Empleado a mostrar
+ * \return void
+ *
+ */
 void printOneEmployee(eEmployee aEmployee);
+/** \brief modifica los datos de un empleado
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void modificar(eEmployee[],int);
+/** \brief Calcula cuantos empleados estan sobre el sueldo promedio y los muestra
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \param float sueldo promedio
+ * \return void
+ *
+ */
 void calcularEmpleadosSobrePromedio(eEmployee[],int,float);
+/** \brief calcula el salario promedio y la suma total de salarios
+ *
+ * \param eEmployee[] lista de empleados
+ * \param int tamaño de la lista
+ * \return void
+ *
+ */
 void calcularSalarios(eEmployee[],int);
-
-/*void mostrarEmpleado(eEmpleado, eSector[], int);
-void cargarEmpleado(eEmpleado[], int, eSector[],int);
-void mostrarListaEmpleados(eEmpleado[], int, eSector[], int);
-
-int buscarLibre(eEmpleado[], int);
-void inicializarEmpleados(eEmpleado[], int);
-void hardcodearDatosEmpleados(eEmpleado[], int,eSector[]);
-void modificar(eEmpleado[], int, int);
-int buscarLegajo(eEmpleado[], int, int);
-void borrarEmpleado(eEmpleado[], int, int);
-
-float buscarSueldoMaximo(eEmpleado[],int);
-void mostrarEmpleadosSueldoMaximo(eEmpleado[],int);
-int contarCarlos(eEmpleado[],int);
-
-void mostrarDescripcionSectores(eSector[],int);
-void mostrarDescripcionSector(eSector);
-
-void mostrarSectores(eSector[],int,eEmpleado[],int);
-void mostrarSector(eSector,eEmpleado[],int);
-
-void mostrarSectorMasEmpleados(eSector[],int,eEmpleado[],int);*/
-
 
 
 

@@ -28,6 +28,40 @@ char pedirChar(char texto[]);
  *
  */
 void pedirCadena(char mensaje[],char cadena[],int tam);
+/** \brief Valida que el tamaño de la cadena no colapse
+ *
+ * \param mensajeError[] char mensaje que se mostrara si la cadena colapsa
+ * \param cadena[] char cadena a validar
+ * \param tam int tamaño que debe respetar la cadena
+ * \return void
+ *
+ */
 void validarTamCadena(char mensajeError[],char cadena[],int tam);
+/** \brief Valida que el entero sea positivo
+ *
+ * \param int entero a validar
+ * \return int entero validado
+ *
+ */
 int validarEnteroPositivo(int);
+/** \brief Valida que el float sea positivo
+ *
+ * \param float float a validar
+ * \return float float validado
+ *
+ */
 float validarFloatPositivo(float);
+/** \brief Valida que el char sea 'n' o 's'
+ *
+ * \param char el char a validar
+ * \return char el char validado
+ *
+ */
+char validarCharSeguir(char);
+/** \brief Menu de opciones
+ *
+ * \param char[] Mensaje que mostrara el menu (opciones)
+ * \return int opcion elegida
+ *
+ */
+int menuDeOpciones(char[]);
