@@ -8,11 +8,11 @@
 void hardcodearDatosEmpleados(eEmployee lista[], int tam)
 {
     int i;
-    int id[]= {0,1,2,3,};
-    char nombres[][50]= {"Carlos","Maria","Carlos","Pedro"};
-    char apellidos[][50]={"Mendez","Perez","Gomez","Pantano"};
-    float sueldosBruto[]= {22000,22000,15000,4000};
-    int sector[]={3,1,2,1};
+    int id[]= {0,1,2,3,4};
+    char nombres[][50]= {"Carlos","Maria","Carlos","Pedro","Juan"};
+    char apellidos[][50]={"Mendez","Perez","Gomez","Pantano","Rodriguez"};
+    float sueldosBruto[]= {22000,22000,15000,40000,10000};
+    int sector[]={3,1,2,1,3};
 
     for(i=0; i<tam; i++)
     {
@@ -104,20 +104,20 @@ void modificar(eEmployee lista[], int tam)
     posicion=findEmployeeById(lista,tam,id);
         if(posicion!=-1)
         {
-            opcion=menuDeOpciones("Que desea modificar?\n1.Nombre\n2.Apellido\n3.Salario\n4.Sector\nElija una opcion");
+            opcion=menuDeOpciones("Que desea modificar?\n1.Nombre\n2.Apellido\n3.Salario\n4.Sector\nElija una opcion: ");
             switch(opcion)
             {
             case 1:
-                pedirCadena("Ingrese el nuevo nombre",lista[posicion].name,tam);
+                pedirCadena("Ingrese el nuevo nombre: ",lista[posicion].name,tam);
                 break;
             case 2:
-                pedirCadena("Ingrese el nuevo apellido",lista[posicion].lastName,tam);
+                pedirCadena("Ingrese el nuevo apellido: ",lista[posicion].lastName,tam);
                 break;
             case 3:
-                lista[posicion].salary=pedirFloat("Ingrese el nuevo sueldo");
+                lista[posicion].salary=pedirFloat("Ingrese el nuevo sueldo: ");
                 break;
             case 4:
-                lista[posicion].sector=pedirEntero("Ingrese el nuevo sector");
+                lista[posicion].sector=pedirEntero("Ingrese el nuevo sector: ");
                 break;
             default:
                     printf("Opcion erronea");
@@ -272,7 +272,7 @@ void calcularEmpleadosSobrePromedio(eEmployee list[],int len, float promedio)
                 }
             }
         }
-        printf("%d empleados superan el sueldo promedio",cantEmpleadosSobrePromedio);
+        printf("%d empleados superan el sueldo promedio\n",cantEmpleadosSobrePromedio);
 }
 void calcularSalarios(eEmployee list[], int len)
 {

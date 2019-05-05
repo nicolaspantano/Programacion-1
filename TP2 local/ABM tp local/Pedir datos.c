@@ -7,6 +7,8 @@ int pedirEntero(char texto[])
     printf("%s",texto);
     scanf("%d",&unEntero);
 
+    unEntero=validarEnteroPositivo(unEntero);
+
     return unEntero;
 }
 float pedirFloat(char texto[])
@@ -16,6 +18,7 @@ float pedirFloat(char texto[])
     printf("%s",texto);
     scanf("%f",&unFloat);
 
+    unFloat=validarFloatPositivo(unFloat);
 
     return unFloat;
 }
@@ -45,4 +48,21 @@ void validarTamCadena(char mensajeError[],char cadena[],int tam)
     }
 
 
+}
+int validarEnteroPositivo(int unEntero)
+{
+    while(unEntero<0)
+    {
+        unEntero=pedirEntero("Ingresar un numero positivo: ");
+    }
+    return unEntero;
+}
+
+float validarFloatPositivo(float unFloat)
+{
+    while(unFloat<0)
+    {
+        unFloat=pedirFloat("Ingresar un numero positivo: ");
+    }
+    return unFloat;
 }

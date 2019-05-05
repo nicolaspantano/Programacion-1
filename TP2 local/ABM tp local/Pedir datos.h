@@ -29,3 +29,5 @@ char pedirChar(char texto[]);
  */
 void pedirCadena(char mensaje[],char cadena[],int tam);
 void validarTamCadena(char mensajeError[],char cadena[],int tam);
+int validarEnteroPositivo(int);
+float validarFloatPositivo(float);
