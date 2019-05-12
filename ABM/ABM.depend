@@ -20,3 +20,14 @@
 	<stdlib.h>
 	"Empleado.h"
 
+1557495389 source:c:\users\compumar\desktop\programacion-1\abm\empleado.c
+	"Empleado.h"
+	<string.h>
+
+1557495389 c:\users\compumar\desktop\programacion-1\abm\empleado.h
+	<stdio.h>
+
+1557495400 source:c:\users\compumar\desktop\programacion-1\abm\main.c
+	<stdlib.h>
+	"Empleado.h"
+

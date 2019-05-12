@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1557696051 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Biblioteca.h"
+	"Pedir datos.h"
+
+1557496967 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\pedir datos.c
+	"Pedir datos.h"
+	<stdio.h>
+	<string.h>
+
+1557495440 c:\users\compumar\desktop\programacion-1\primer parcial\parcial\pedir datos.h
+	<stdio.h>
+
+1557696610 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\biblioteca.c
+	"Biblioteca.h"
+	"string.h"
+	"Pedir datos.h"
+
+1557695545 c:\users\compumar\desktop\programacion-1\primer parcial\parcial\biblioteca.h
+	<stdio.h>
+
