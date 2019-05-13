@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1557711789 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Biblioteca.h"
+	"Pedir datos.h"
+
+1557496967 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\pedir datos.c
+	"Pedir datos.h"
+	<stdio.h>
+	<string.h>
+
+1557716970 c:\users\compumar\desktop\programacion-1\primer parcial\parcial\pedir datos.h
+	<stdio.h>
+
+1557716970 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\biblioteca.c
+	"Biblioteca.h"
+	"string.h"
+	"Pedir datos.h"
+
+1557712879 c:\users\compumar\desktop\programacion-1\primer parcial\parcial\biblioteca.h
+	<stdio.h>
+
+1557749435 source:c:\users\alumno\desktop\programacion-1-master\primer parcial\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Biblioteca.h"
+	"Pedir datos.h"
+
+1557749292 c:\users\alumno\desktop\programacion-1-master\primer parcial\parcial\biblioteca.h
+	<stdio.h>
+
+1557717097 c:\users\alumno\desktop\programacion-1-master\primer parcial\parcial\pedir datos.h
+	<stdio.h>
+
+1557747948 source:c:\users\alumno\desktop\programacion-1-master\primer parcial\parcial\pedir datos.c
+	"Pedir datos.h"
+	<stdio.h>
+	<string.h>
+
+1557749488 source:c:\users\alumno\desktop\programacion-1-master\primer parcial\parcial\biblioteca.c
+	"Biblioteca.h"
+	"string.h"
+	"Pedir datos.h"
+
+1557749488 source:c:\users\alumno\desktop\programacion-1-master\primer parcial\pantanonicolasprimerparcial\biblioteca.c
+	"Biblioteca.h"
+	"string.h"
+	"Pedir datos.h"
+
+1557749292 c:\users\alumno\desktop\programacion-1-master\primer parcial\pantanonicolasprimerparcial\biblioteca.h
+	<stdio.h>
+
+1557717097 c:\users\alumno\desktop\programacion-1-master\primer parcial\pantanonicolasprimerparcial\pedir datos.h
+	<stdio.h>
+
+1557755442 source:c:\users\alumno\desktop\programacion-1-master\primer parcial\pantanonicolasprimerparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"peliculas.h"
+	"Pedir datos.h"
+
+1557747948 source:c:\users\alumno\desktop\programacion-1-master\primer parcial\pantanonicolasprimerparcial\pedir datos.c
+	"Pedir datos.h"
+	<stdio.h>
+	<string.h>
+
+1557755442 c:\users\alumno\desktop\programacion-1-master\primer parcial\pantanonicolasprimerparcial\peliculas.h
+	<stdio.h>
+
+1557756808 source:c:\users\alumno\desktop\programacion-1-master\primer parcial\pantanonicolasprimerparcial\peliculas.c
+	"peliculas.h"
+	"string.h"
+	"Pedir datos.h"
+
