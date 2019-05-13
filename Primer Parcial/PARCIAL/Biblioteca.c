@@ -85,7 +85,7 @@ void hardcodearDatosActores(eActor lista[], int tam)
 {
     int i;
     int ids[]= {1,2,3,4,5,6,7,8,9,10};
-    char nombres[][70]= {"Scarlett Johansson","Robert  Downey Jr","Mark Ruffalo","Chris Evans","Chris Hemsworth","Samuel Jackson","Gwyneth Paltrow","Paul Rudd","Bradley Cooper","Josh Brolin"};
+    char nombres[][70]= {"Scarlett Johansson","Robert Downey Jr","Mark Ruffalo","Chris Evans","Chris Hemsworth","Samuel Jackson","Gwyneth Paltrow","Paul Rudd","Bradley Cooper","Josh Brolin"};
     char nacionalidades[][50]={"Argentina","EEUU","Canada","EEUU","Argentina","EEUU","Canada","Argentina","EEUU","Canada"};
 
     for(i=0; i<tam; i++)

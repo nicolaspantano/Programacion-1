@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1557696051 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\main.c
+1557711789 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Biblioteca.h"
@@ -10,14 +10,14 @@
 	<stdio.h>
 	<string.h>
 
-1557495440 c:\users\compumar\desktop\programacion-1\primer parcial\parcial\pedir datos.h
+1557716970 c:\users\compumar\desktop\programacion-1\primer parcial\parcial\pedir datos.h
 	<stdio.h>
 
-1557696610 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\biblioteca.c
+1557716970 source:c:\users\compumar\desktop\programacion-1\primer parcial\parcial\biblioteca.c
 	"Biblioteca.h"
 	"string.h"
 	"Pedir datos.h"
 
-1557695545 c:\users\compumar\desktop\programacion-1\primer parcial\parcial\biblioteca.h
+1557712879 c:\users\compumar\desktop\programacion-1\primer parcial\parcial\biblioteca.h
 	<stdio.h>
 

@@ -41,6 +41,7 @@ int validarEnteroPositivoRango (int unEntero, int min,int max)
     {
         unEntero=pedirEntero("No esta en el rango solicitado. Reingrese el numero: ");
     }
+    return unEntero;
 }
 void pedirCadena(char mensaje[],char cadena[],int tam)
 {
