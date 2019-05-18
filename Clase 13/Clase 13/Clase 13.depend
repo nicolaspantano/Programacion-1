@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1558213497 source:c:\users\compumar\desktop\programacion-1\clase 13\clase 13\biblioteca.c
+	"biblioteca.h"
+	<stdio.h>
+	<stdlib.h>
+
+1558213228 c:\users\compumar\desktop\programacion-1\clase 13\clase 13\biblioteca.h
+
+1558213299 source:c:\users\compumar\desktop\programacion-1\clase 13\clase 13\main.c
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
