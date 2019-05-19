@@ -73,3 +73,71 @@ int ordenarArray(int* pVector,int tam)
     }
     return estado;
 }
+int buscarMax(int* pVector,int tam)
+{
+    int max=0;
+    int i;
+    int flagNull=0;
+
+    if(pVector!=NULL)
+    {
+
+        for(i=0;i<tam;i++)
+        {
+            if(i==0)
+            {
+                max=*(pVector+i);
+            }
+            else if(*(pVector+i)>max)
+            {
+                max=*(pVector+i);
+            }
+        }
+    }
+
+
+    return max;
+}
+float sacarPromedio(int* pVector,int tam)
+{
+    int i;
+    float promedio=0;
+    int acumulador=0;
+
+
+    if(pVector!=NULL)
+    {
+        for(i=0;i<tam;i++)
+        {
+            acumulador+=*(pVector+i);
+
+        }
+        promedio=(float)acumulador/i;
+    }
+
+
+    return promedio;
+}
+int borrarUnNumero(int* pVector,int tam)
+{
+    int i;
+    int estado=ERROR;
+    int numero;
+    if(pVector!=NULL)
+    {
+        printf("Que numero desea borrar del vector?");
+        scanf("%d",&numero);
+        for(i=0;i<tam;i++)
+        {
+            if(*(pVector+i)==numero)
+            {
+                *(pVector+i)=0;
+            }
+        }
+        estado=EXITO;
+    }
+
+
+
+    return estado;
+}
