@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1559005867 source:c:\users\compumar\desktop\programacion-1\archivos 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+
+1559005740 c:\users\compumar\desktop\programacion-1\archivos 2\empleado.h
+	<stdio.h>
+
+1559005867 source:c:\users\compumar\desktop\programacion-1\archivos 2\empleado.c
+	"empleado.h"
+
