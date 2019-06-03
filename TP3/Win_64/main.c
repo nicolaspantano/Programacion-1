@@ -22,8 +22,6 @@
 int main()
 {
     int option;
-    FILE* miArchivo;
-    miArchivo=fopen("data.csv","r");
     LinkedList* listaEmpleados = ll_newLinkedList();
     ll_add(listaEmpleados,&option);
 
@@ -35,31 +33,41 @@ int main()
         switch(option)
         {
         case 1:
-            parser_EmployeeFromText(miArchivo,listaEmpleados);
+            controller_loadFromText("data.csv",listaEmpleados);
+            printf("Carga exitosa");
             break;
         case 2:
             break;
         case 3:
+            controller_addEmployee(listaEmpleados);
+            printf("Empleado añadido exitosamente\n");
             break;
         case 4:
+            controller_editEmployee(listaEmpleados);
+            printf("Edicion exitosa\n");
             break;
         case 5:
+            controller_removeEmployee(listaEmpleados);
             break;
         case 6:
+            controller_ListEmployee(listaEmpleados);
             break;
         case 7:
+            controller_sortEmployee(listaEmpleados);
             break;
         case 8:
             break;
         case 9:
             break;
         case 10:
-            fclose(miArchivo);
             ll_deleteLinkedList(listaEmpleados);
             break;
         default:
+            printf("Opcion invalida");
             break;
         }
+    system("pause");
+    system("cls");
     }
     while(option != 10);
 

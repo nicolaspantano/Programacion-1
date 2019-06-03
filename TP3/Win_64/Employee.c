@@ -7,7 +7,17 @@ Employee* employee_new()
     Employee* unEmpleado=(Employee*)malloc(sizeof(Employee));
     return unEmpleado;
 }
+Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr,char* sueldoStr)
+{
+    Employee* unEmpleado=(Employee*)malloc(sizeof(Employee));
 
+    unEmpleado->id=atoi(idStr);
+    strcpy(unEmpleado->nombre,nombreStr);
+    unEmpleado->horasTrabajadas=atoi(horasTrabajadasStr);
+    unEmpleado->sueldo=atoi(sueldoStr);
+
+    return unEmpleado;
+}
 int employee_setId(Employee* this,int id)
 {
     int estado=0;
