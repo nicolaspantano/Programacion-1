@@ -87,5 +87,9 @@ int employee_getSueldo(Employee* this,int* sueldo)
 
 }
 
+int employee_sort(Employee* e1,Employee* e2)
+{
+        return strcmp(e1->nombre,e2->nombre);
+}
 
 

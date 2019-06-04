@@ -23,7 +23,6 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 
         ll_add(pArrayListEmployee,aux);
     }
-    fclose(pFile);
 
     return 1;
 }

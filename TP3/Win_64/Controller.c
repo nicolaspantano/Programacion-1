@@ -169,6 +169,13 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
+    int (*pFunc)(Employee*,Employee*);
+    pFunc=employee_sort;
+
+
+        ll_sort(pArrayListEmployee,pFunc,1);
+
+
 
     return 1;
 }
@@ -212,3 +219,13 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
     return 1;
 }
 
+void mostrarTodos(LinkedList* pArrayListEmployee)
+{
+    int i;
+    Employee* aux;
+    for(i=0;i<ll_len(pArrayListEmployee);i++)
+    {
+        aux=ll_get(pArrayListEmployee,i);
+        printf("%d,%s,%d,%d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
+    }
+}
