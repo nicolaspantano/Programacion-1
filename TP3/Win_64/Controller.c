@@ -182,6 +182,21 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 {
+    int i;
+    Employee* aux;
+    FILE* miArchivo;
+
+    miArchivo=fopen(path,"w");
+    fprintf(miArchivo,"id,nombre,horasTrabajadas,sueldo\n");
+    for(i=0;i<ll_len(pArrayListEmployee);i++)
+    {
+        aux=ll_get(pArrayListEmployee,i);
+
+        fprintf(miArchivo,"%d,%s,%d,%d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
+    }
+
+
+    fclose(miArchivo);
     return 1;
 }
 

@@ -118,3 +118,19 @@
 
 1559582565 c:\users\compumar\desktop\programacion-1\tp3\win_64\parser.h
 
+1559648770 source:c:\users\alumno\desktop\programacion-1\tp3\win_64\employee.c
+	"Employee.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1559648770 c:\users\alumno\desktop\programacion-1\tp3\win_64\employee.h
+
+1559648770 source:c:\users\alumno\desktop\programacion-1\tp3\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559648770 c:\users\alumno\desktop\programacion-1\tp3\win_64\linkedlist.h
+
