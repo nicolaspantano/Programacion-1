@@ -31,11 +31,8 @@ int employee_setId(Employee* this,int id)
 }
 int employee_getId(Employee* this,int* id)
 {
-
-    *id=this->id;
-    return id;
-
-
+    id=&(this->id);
+    return 1;
 
 }
 int employee_setNombre(Employee* this,char* nombre)
@@ -52,7 +49,8 @@ int employee_setNombre(Employee* this,char* nombre)
 }
 int employee_getNombre(Employee* this,char* nombre)
 {
-
+    nombre=this->nombre;
+    return 1;
 }
 
 int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
@@ -68,7 +66,8 @@ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
 }
 int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas)
 {
-
+    horasTrabajadas=&(this->horasTrabajadas);
+    return 1;
 }
 
 int employee_setSueldo(Employee* this,int sueldo)
@@ -84,7 +83,8 @@ int employee_setSueldo(Employee* this,int sueldo)
 }
 int employee_getSueldo(Employee* this,int* sueldo)
 {
-
+    sueldo=&(this->sueldo);
+    return 1;
 }
 
 int employee_sort(Employee* e1,Employee* e2)

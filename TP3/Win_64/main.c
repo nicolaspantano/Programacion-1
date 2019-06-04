@@ -25,7 +25,6 @@ int main()
     LinkedList* listaEmpleados = ll_newLinkedList();
     ll_add(listaEmpleados,&option);
 
-
     do
     {
         printf("Ingrese opcion: ");

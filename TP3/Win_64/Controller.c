@@ -171,12 +171,7 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
     int (*pFunc)(Employee*,Employee*);
     pFunc=employee_sort;
-
-
-        ll_sort(pArrayListEmployee,pFunc,1);
-
-
-
+    ll_sort(pArrayListEmployee,pFunc,1);
     return 1;
 }
 
