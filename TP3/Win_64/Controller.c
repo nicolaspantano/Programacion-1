@@ -31,6 +31,10 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 {
+    FILE* miArchivo;
+    miArchivo=fopen(path,"rb");
+     parser_EmployeeFromBinary(miArchivo,pArrayListEmployee);
+    fclose(miArchivo);
     return 1;
 }
 
@@ -211,6 +215,22 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
 {
+    int i;
+    Employee* aux;
+    FILE* miArchivo;
+
+    miArchivo=fopen(path,"wb");
+
+    for(i=0;i<ll_len(pArrayListEmployee);i++)
+    {
+            aux=ll_get(pArrayListEmployee,i);
+            fwrite(aux,sizeof(Employee),1,miArchivo);
+
+    }
+
+
+    fclose(miArchivo);
+
     return 1;
 }
 

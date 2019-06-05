@@ -36,6 +36,8 @@ int main()
             printf("Carga exitosa");
             break;
         case 2:
+            controller_loadFromBinary("data.dat",listaEmpleados);
+            mostrarTodos(listaEmpleados);
             break;
         case 3:
             controller_addEmployee(listaEmpleados);
@@ -58,6 +60,7 @@ int main()
             controller_saveAsText("data.csv",listaEmpleados);
             break;
         case 9:
+            controller_saveAsBinary("data.dat",listaEmpleados);
             break;
         case 10:
             ll_deleteLinkedList(listaEmpleados);
