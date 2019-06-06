@@ -3,7 +3,8 @@
 #include "LinkedList.h"
 #include "Employee.h"
 #include "parser.h"
-
+#define PATHT "data.csv"
+#define PATHB "data.dat"
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
@@ -14,11 +15,13 @@
  */
 int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 {
-   FILE* miArchivo;
-   miArchivo=fopen(path,"r");
-   parser_EmployeeFromText(miArchivo,pArrayListEmployee);
-   fclose(miArchivo);
-
+    FILE* miArchivo;
+    if(path!=NULL&&pArrayListEmployee!=NULL)
+    {
+        miArchivo=fopen(path,"r");
+        parser_EmployeeFromText(miArchivo,pArrayListEmployee);
+        fclose(miArchivo);
+    }
     return 1;
 }
 
@@ -31,10 +34,33 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 {
-    FILE* miArchivo;
+    /*FILE* miArchivo;
     miArchivo=fopen(path,"rb");
      parser_EmployeeFromBinary(miArchivo,pArrayListEmployee);
-    fclose(miArchivo);
+    fclose(miArchivo);*/
+    int i;
+    if(path != NULL && pArrayListEmployee != NULL)
+    {
+        FILE* MAB;
+        /*FILE* MAT;
+        MAT = fopen(PATHT, "r");
+        parser_EmployeeFromText(MAT, pArrayListEmployee);
+        fclose(MAT);
+
+        MAB = fopen(PATHB, "wb");
+        for(i=0;i<ll_len(pArrayListEmployee);i++)
+        {
+            Employee* aux;
+            aux = ll_get(pArrayListEmployee, i);
+            fwrite(aux, sizeof(Employee),1,MAB);
+        }
+        fclose(MAB);*/
+
+        MAB = fopen(PATHB, "rb");
+        parser_EmployeeFromBinary(MAB, pArrayListEmployee);
+        fclose(MAB);
+
+    }
     return 1;
 }
 
@@ -115,7 +141,8 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
         while(opcion!=4);
 
     }
-    else{
+    else
+    {
         printf("No existe un empleado con ese ID");
     }
     return 1;
@@ -156,7 +183,7 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
     int i;
     Employee* aux;
-    for(i=1;i<ll_len(pArrayListEmployee);i++)
+    for(i=1; i<ll_len(pArrayListEmployee); i++)
     {
         aux=ll_get(pArrayListEmployee,i);
         printf("%4d %15s %3d %6d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
@@ -192,17 +219,20 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
     Employee* aux;
     FILE* miArchivo;
 
-    miArchivo=fopen(path,"w");
-    fprintf(miArchivo,"id,nombre,horasTrabajadas,sueldo\n");
-    for(i=0;i<ll_len(pArrayListEmployee);i++)
+    if(path!=NULL)
     {
-        aux=ll_get(pArrayListEmployee,i);
+        miArchivo=fopen(path,"w");
+        fprintf(miArchivo,"id,nombre,horasTrabajadas,sueldo\n");
+        for(i=0; i<ll_len(pArrayListEmployee); i++)
+        {
+            aux=ll_get(pArrayListEmployee,i);
 
-        fprintf(miArchivo,"%d,%s,%d,%d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
+            fprintf(miArchivo,"%d,%s,%d,%d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
+        }
+
+
+        fclose(miArchivo);
     }
-
-
-    fclose(miArchivo);
     return 1;
 }
 
@@ -218,19 +248,20 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
     int i;
     Employee* aux;
     FILE* miArchivo;
-
-    miArchivo=fopen(path,"wb");
-
-    for(i=0;i<ll_len(pArrayListEmployee);i++)
+    if(path!=NULL)
     {
+        miArchivo=fopen(path,"wb");
+
+        for(i=0; i<ll_len(pArrayListEmployee); i++)
+        {
             aux=ll_get(pArrayListEmployee,i);
             fwrite(aux,sizeof(Employee),1,miArchivo);
 
+        }
+
+
+        fclose(miArchivo);
     }
-
-
-    fclose(miArchivo);
-
     return 1;
 }
 
@@ -238,7 +269,7 @@ void mostrarTodos(LinkedList* pArrayListEmployee)
 {
     int i;
     Employee* aux;
-    for(i=0;i<ll_len(pArrayListEmployee);i++)
+    for(i=0; i<ll_len(pArrayListEmployee); i++)
     {
         aux=ll_get(pArrayListEmployee,i);
         printf("%d,%s,%d,%d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
