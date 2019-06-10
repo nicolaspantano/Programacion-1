@@ -55,6 +55,19 @@ int ll_len(LinkedList* this)
 static Node* getNode(LinkedList* this, int nodeIndex)
 {
     Node* pNode = NULL;
+    int i;
+
+    if(this!=NULL && (nodeIndex>=0&&nodeIndex<ll_len(this)))
+    {
+        pNode=this->pFirstNode;
+        for(i=0; i<nodeIndex; i++)
+        {
+            pNode=pNode->pNextNode;
+        }
+
+    }
+
+
 
     return pNode;
 }
@@ -85,24 +98,30 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
     int returnAux = -1;
-    int i;
-    Node* nodo;
-    nodo=this->pFirstNode;
+    Node* newNode;
+    Node* previous;
+    newNode=(Node*)malloc(sizeof(Node));
 
-    if(this!=NULL && (nodeIndex > 0 && nodeIndex <=ll_len(this)))
+    if(this!=NULL && (nodeIndex>=0&&nodeIndex<=ll_len(this)))
     {
-        for(i=0;i<=ll_len(this); i++)
+        newNode->pElement=pElement;
+        if(nodeIndex!=0)
         {
-
-            if(i==nodeIndex)
-            {
-                nodo->pElement=pElement;
-            }
-
-            nodo=nodo->pNextNode;
+            previous=getNode(this,nodeIndex-1);
+            newNode->pNextNode=previous->pNextNode;
+            previous->pNextNode=newNode;
         }
-    this->size++;
+        else
+        {
+            newNode->pNextNode=this->pFirstNode;
+            this->pFirstNode=newNode;
+        }
+
+        this->size++;
+        returnAux=0;
     }
+
+
     return returnAux;
 }
 
@@ -132,7 +151,23 @@ int test_addNode(LinkedList* this, int nodeIndex,void* pElement)
 int ll_add(LinkedList* this, void* pElement)
 {
     int returnAux = -1;
+    Node* current;
+    int index=0;
+    if(this!=NULL)
+    {
+        current=this->pFirstNode;
+        while(current!=NULL)
+        {
+            current=current->pNextNode;
+            index++;
+        }
+        if(!(addNode(this,index,pElement)))
+        {
+            returnAux=0;
 
+        }
+
+    }
     return returnAux;
 }
 
@@ -147,26 +182,13 @@ int ll_add(LinkedList* this, void* pElement)
 void* ll_get(LinkedList* this, int index)
 {
     void* returnAux = NULL;
-    /*int i;
-
-    if(this!=NULL && (index > 0 && index <ll_len(this)))
+    Node* aux;
+    int len=ll_len(this);
+    if(this!=NULL && index >= 0 && index<len)
     {
-        Node* aux;
-        aux=(Node*)malloc(sizeof(Node));
-        aux=this->pFirstNode;
-
-    for(i=0;i<=ll_len(this);i++)
-        {
-            if(i==index)
-            {
-                returnAux=aux->pElement;
-
-            }
-
-                aux=aux->pNextNode;
-
-        }
-    }*/
+        aux=getNode(this,index);
+        returnAux=aux->pElement;
+    }
     return returnAux;
 }
 
