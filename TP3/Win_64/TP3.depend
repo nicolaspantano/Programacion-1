@@ -53,32 +53,33 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1533133026 source:c:\users\alumno\desktop\programacion-1-master\tp3\win_64\controller.c
+1560168542 source:c:\users\alumno\desktop\programacion-1-master\tp3\win_64\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
+	"parser.h"
 
-1559566024 c:\users\alumno\desktop\programacion-1-master\tp3\win_64\linkedlist.h
+1559784833 c:\users\alumno\desktop\programacion-1-master\tp3\win_64\linkedlist.h
 
-1533133022 c:\users\alumno\desktop\programacion-1-master\tp3\win_64\employee.h
+1559784833 c:\users\alumno\desktop\programacion-1-master\tp3\win_64\employee.h
 
-1559568309 source:c:\users\alumno\desktop\programacion-1-master\tp3\win_64\employee.c
+1559784833 source:c:\users\alumno\desktop\programacion-1-master\tp3\win_64\employee.c
 	"Employee.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1559571577 source:c:\users\alumno\desktop\programacion-1-master\tp3\win_64\main.c
+1560168542 source:c:\users\alumno\desktop\programacion-1-master\tp3\win_64\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Controller.h"
 	"Employee.h"
 
-1533133022 c:\users\alumno\desktop\programacion-1-master\tp3\win_64\controller.h
+1560168542 c:\users\alumno\desktop\programacion-1-master\tp3\win_64\controller.h
 
-1559571126 source:c:\users\alumno\desktop\programacion-1-master\tp3\win_64\parser.c
+1559784833 source:c:\users\alumno\desktop\programacion-1-master\tp3\win_64\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -151,4 +152,6 @@
 	"Employee.h"
 
 1559656933 c:\users\alumno\desktop\programacion-1\tp3\win_64\controller.h
+
+1559784833 c:\users\alumno\desktop\programacion-1-master\tp3\win_64\parser.h
 

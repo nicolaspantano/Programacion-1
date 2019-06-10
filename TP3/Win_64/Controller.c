@@ -3,8 +3,7 @@
 #include "LinkedList.h"
 #include "Employee.h"
 #include "parser.h"
-#define PATHT "data.csv"
-#define PATHB "data.dat"
+
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
@@ -34,31 +33,17 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 {
-    /*FILE* miArchivo;
-    miArchivo=fopen(path,"rb");
-     parser_EmployeeFromBinary(miArchivo,pArrayListEmployee);
-    fclose(miArchivo);*/
     int i;
+    FILE* miArchivo;
+
     if(path != NULL && pArrayListEmployee != NULL)
     {
-        FILE* MAB;
-        /*FILE* MAT;
-        MAT = fopen(PATHT, "r");
-        parser_EmployeeFromText(MAT, pArrayListEmployee);
-        fclose(MAT);
+        controller_loadFromText("data.csv",pArrayListEmployee);
+        controller_saveAsBinary(path,pArrayListEmployee);
 
-        MAB = fopen(PATHB, "wb");
-        for(i=0;i<ll_len(pArrayListEmployee);i++)
-        {
-            Employee* aux;
-            aux = ll_get(pArrayListEmployee, i);
-            fwrite(aux, sizeof(Employee),1,MAB);
-        }
-        fclose(MAB);*/
-
-        MAB = fopen(PATHB, "rb");
-        parser_EmployeeFromBinary(MAB, pArrayListEmployee);
-        fclose(MAB);
+        miArchivo = fopen(path, "rb");
+        parser_EmployeeFromBinary(miArchivo, pArrayListEmployee);
+        fclose(miArchivo);
 
     }
     return 1;
@@ -83,10 +68,19 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 
     printf("Ingrese las horas trabajadas: ");
     scanf("%d",&(unEmpleado->horasTrabajadas));
+    while(unEmpleado->horasTrabajadas<0)
+    {
+        printf("No existen horas negativas. Ingrese las horas trabajadas: ");
+        scanf("%d",&(unEmpleado->horasTrabajadas));
+    }
 
     printf("Ingrese el sueldo: ");
     scanf("%d",&(unEmpleado->sueldo));
-
+    while(unEmpleado->sueldo<0)
+    {
+        printf("No existe un sueldo negativo.Ingrese el sueldo: ");
+        scanf("%d",&(unEmpleado->sueldo));
+    }
 
     ll_add(pArrayListEmployee,unEmpleado);
 
@@ -265,13 +259,3 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
     return 1;
 }
 
-void mostrarTodos(LinkedList* pArrayListEmployee)
-{
-    int i;
-    Employee* aux;
-    for(i=0; i<ll_len(pArrayListEmployee); i++)
-    {
-        aux=ll_get(pArrayListEmployee,i);
-        printf("%d,%s,%d,%d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
-    }
-}

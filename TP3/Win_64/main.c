@@ -27,7 +27,7 @@ int main()
 
     do
     {
-        printf("Ingrese opcion: ");
+        printf("1.Carga (Modo Texto)\n2.Carga (Modo Binario)\n3.Alta\n4.Modificacion\n5.Baja\n6.Listar\n7.Ordenar\n8.Guardar (Modo Texto)\n9.Guardar (Modo Binario)\n10.Salir\nIngrese opcion: ");
         scanf("%d",&option);
         switch(option)
         {
@@ -37,7 +37,7 @@ int main()
             break;
         case 2:
             controller_loadFromBinary("data.dat",listaEmpleados);
-            mostrarTodos(listaEmpleados);
+
             break;
         case 3:
             controller_addEmployee(listaEmpleados);
