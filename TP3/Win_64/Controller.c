@@ -33,7 +33,7 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 {
-    int i;
+
     FILE* miArchivo;
 
     if(path != NULL && pArrayListEmployee != NULL)
@@ -60,8 +60,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
     Employee* unEmpleado=employee_new();
 
-    printf("Ingrese un ID: ");
-    scanf("%d",&(unEmpleado->id));
+    unEmpleado->id=ll_len(pArrayListEmployee)+1;
 
     printf("Ingrese el nombre: ");
     scanf("%s",unEmpleado->nombre);
