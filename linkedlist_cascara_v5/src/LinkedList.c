@@ -518,7 +518,7 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
     Node* aux;
     Node* element1;
     Node* element2;
-    if(this!=NULL && pFunc!=NULL)
+    if(this!=NULL && pFunc!=NULL&& (order==1||order==0))
     {
         for(i=0;i<(ll_len(this)-1);i++)
         {
@@ -533,8 +533,8 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
                   if(pFunc(element1,element2)==-1)
                   {
                       aux=element2;
-                      ll_set(this,j,element1);
-                      ll_set(this,i,aux);
+                      element2=element1;
+                      element1=aux;
                   }
                 }
                 else
@@ -542,16 +542,20 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
                     if(pFunc(element1,element2)==1)
                   {
                       aux=element1;
-                      ll_set(this,i,element2);
-                      ll_set(this,j,aux);
+                      element1=element2;
+                      element2=aux;
                   }
                 }
+
+                ll_set(this,i,element1);
+                ll_set(this,j,element2);
 
 
             }
         }
+        returnAux=0;
     }
-    returnAux=0;
+
     return returnAux;
 
 }
