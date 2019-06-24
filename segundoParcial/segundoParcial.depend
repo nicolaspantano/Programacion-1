@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1561387594 source:c:\users\alumno\desktop\programacion-1-master\segundoparcial\eemployee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"eEmployee.H"
+
+1561386890 c:\users\alumno\desktop\programacion-1-master\segundoparcial\eemployee.h
+
+1561387781 source:c:\users\alumno\desktop\programacion-1-master\segundoparcial\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561386356 c:\users\alumno\desktop\programacion-1-master\segundoparcial\linkedlist.h
+
+1561386707 source:c:\users\alumno\desktop\programacion-1-master\segundoparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"eEmployee.H"
+	"parser.h"
+	"pedirDatos.h"
+	"controller.h"
+
+1561346980 c:\users\alumno\desktop\programacion-1-master\segundoparcial\parser.h
+
+1561386622 source:c:\users\alumno\desktop\programacion-1-master\segundoparcial\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"eEmployee.H"
+	"parser.h"
+
+1561386931 source:c:\users\alumno\desktop\programacion-1-master\segundoparcial\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"eEmployee.h"
+
+1561346633 source:c:\users\alumno\desktop\programacion-1-master\segundoparcial\pedirdatos.c
+	"pedirDatos.h"
+	<stdio.h>
+	<string.h>
+
+1561346633 c:\users\alumno\desktop\programacion-1-master\segundoparcial\pedirdatos.h
+
+1561383824 c:\users\alumno\desktop\programacion-1-master\segundoparcial\controller.h
+
