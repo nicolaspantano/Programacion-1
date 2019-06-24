@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1561344731 source:c:\users\compumar\desktop\programacion-1\tp4\tp4\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+
+1561344731 c:\users\compumar\desktop\programacion-1\tp4\tp4\linkedlist.h
+
+1561344731 c:\users\compumar\desktop\programacion-1\tp4\tp4\employee.h
+
+1561344731 c:\users\compumar\desktop\programacion-1\tp4\tp4\parser.h
+
+1561344731 source:c:\users\compumar\desktop\programacion-1\tp4\tp4\employee.c
+	"Employee.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1561346435 source:c:\users\compumar\desktop\programacion-1\tp4\tp4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1561344731 c:\users\compumar\desktop\programacion-1\tp4\tp4\controller.h
+
+1561345371 source:c:\users\compumar\desktop\programacion-1\tp4\tp4\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561344731 source:c:\users\compumar\desktop\programacion-1\tp4\tp4\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
